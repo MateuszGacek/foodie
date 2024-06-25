@@ -1,4 +1,4 @@
-import classes from "@/app/main-header-background.module.css";
+import classes from "./main-header-background.module.css";
 
 const MainHeaderBackground = () => {
   return (

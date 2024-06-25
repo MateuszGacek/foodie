@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
-import classes from "@/app/main-header.module.css";
+import classes from "./main-header.module.css";
 import MainHeaderBackground from "./main-header-background";
 
 const MainHeader = () => {
