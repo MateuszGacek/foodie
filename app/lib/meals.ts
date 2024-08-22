@@ -3,10 +3,13 @@ import sql from "better-sqlite3";
 
 const db = sql("meals.db");
 
-const getMeals: () => MealItemType[] = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-  // throw new Error("Loading meals failed");
+export const getMeals: () => MealItemType[] = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return db.prepare("SELECT * FROM meals").all() as MealItemType[];
 };
 
-export default getMeals;
+export const getMeal = (slug: string) => {
+  return db
+    .prepare("SELECT * FROM meals WHERE slug = ?")
+    .get(slug) as MealItemType;
+};

@@ -3,8 +3,7 @@ import Link from "next/link";
 
 import classes from "./page.module.css";
 import MealsGrid from "../components/meals/meals-grid";
-import getMeals from "../lib/meals";
-import MealsLoading from "./loading-out";
+import { getMeals } from "../lib/meals";
 
 const MealsItems: () => React.ReactNode = async () => {
   const meals = await getMeals();
